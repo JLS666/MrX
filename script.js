@@ -22,6 +22,21 @@ var circle = L.circle([51.508, -0.12], {
 }).addTo(map);
 
 
+
+
+
+const intervalID2 = setInterval(getLocation, 1000);
+
+function getLocation() {
+  console.log("läuft2");
+  navigator.geolocation.getCurrentPosition(zeigePosition,errorFunc,options);
+}
+
+function errorFunc(){
+  console.log("Fehler");
+}
+
+
 if (navigator.geolocation) { 
   console.log("Location vorhanden");
   console.log(navigator.geolocation);
@@ -57,9 +72,9 @@ ziel = {
 };
 
 options = {
-  enableHighAccuracy: false,
+  enableHighAccuracy: true,
   timeout: 5000,
-  maximumAge: 0
+  maximumAge: 1
 };
 
 function positionCallback(position) {
@@ -78,4 +93,5 @@ function positionCallback(position) {
     console.log("Richtung: " + position.coords.heading); //Grad von wahrem Norden
     ausgabe.innerHTML = "Zeitpunkt: " + position.timestamp + ", Latitude: " + position.coords.latitude + ", Longitude: " + position.coords.longitude + ", Genauigkeit in m: " + position.coords.accuracy + ", Höhe: " + position.coords.altitude + ", Genauigkeit in m: " + position.coords.altitudeAccuracy + ", Geschw: " + position.coords.speed + ", Richtung: " + position.coords.heading;
 }
+
 
