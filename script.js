@@ -1,3 +1,4 @@
+const ausgabe = document.getElementById("debugInfo");
 // initialize Leaflet
 var map = L.map('map').setView({lon: 0, lat: 0}, 2);
 
@@ -63,17 +64,18 @@ options = {
 
 function positionCallback(position) {
   //wann die Position ermittelt wurde
-  console.log(position.timestamp);
+    console.log("Zeitpunkt: " + position.timestamp);
 
     console.log("Latitude: " + position.coords.latitude); //dezimal Grad
     console.log("Longitude: " + position.coords.longitude); //dezimal Grad
     console.log("Genauigkeit in m: " + position.coords.accuracy); //Meter
+    
 
     console.log("Höhe: " + position.coords.altitude); //Meter
     console.log("Genauigkeit in m: " + position.coords.altitudeAccuracy); //Meter
 
     console.log("Geschw: " + position.coords.speed); //Meter pro Sek.
     console.log("Richtung: " + position.coords.heading); //Grad von wahrem Norden
+    ausgabe.innerHTML = "Zeitpunkt: " + position.timestamp + ", Latitude: " + position.coords.latitude + ", Longitude: " + position.coords.longitude + ", Genauigkeit in m: " + position.coords.accuracy + ", Höhe: " + position.coords.altitude + ", Genauigkeit in m: " + position.coords.altitudeAccuracy + ", Geschw: " + position.coords.speed + ", Richtung: " + position.coords.heading;
 }
 
-positionCallback();
