@@ -25,7 +25,7 @@ var circle = L.circle([49.2, 9.5], {
 
 
 
-const intervalID2 = setInterval(getLocation, 1000);
+const intervalID2 = setInterval(getLocation, 5000);
 
 function getLocation() {
   console.log("läuft2");
@@ -74,7 +74,7 @@ ziel = {
 options = {
   enableHighAccuracy: true,
   timeout: 5000,
-  maximumAge: 1
+  maximumAge: 10000
 };
 
 function positionCallback(position) {
