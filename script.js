@@ -1,6 +1,6 @@
 const ausgabe = document.getElementById("debugInfo");
 // initialize Leaflet
-var map = L.map('map').setView({lon: 0, lat: 0}, 2);
+var map = L.map('map').setView({lon: 9.5, lat: 49.2}, 16);
 
 // add the OpenStreetMap tiles
 L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
@@ -14,11 +14,11 @@ L.control.scale({imperial: true, metric: true}).addTo(map);
 // show a marker on the map
 L.marker({lon: -0.11, lat: 51.508}).bindPopup("<b>Hello world!</b><br>I am a popup.").addTo(map);
 
-var circle = L.circle([51.508, -0.12], {
+var circle = L.circle([49.2, 9.5], {
     color: 'red',
     fillColor: '#f03',
     fillOpacity: 0.1,
-    radius: 1000
+    radius: 300
 }).addTo(map);
 
 
