@@ -13,3 +13,22 @@ Ziel: Detektive müssen Mr. X fangen
     - sehen
     - x Meter Abstand haben (über GPS oder Bluetooth messen?)
 
+## Funktionen
+### Pflicht
+* Mister X Anzeige Frequenz
+* Spielgebiet eingrenzen können
+* Spielzeit eingeben
+* Startzeit eingeben, wie lange kann sich Mr. X davor loslaufen
+
+### Optional
+* Karte offline speichern
+* GPS Frequenz (Akkusparmodus)
+* Power-Ups (auf der Karte zum einsammeln)
+    * Karte umdrehen
+    * Tarnkappe für Sucher und Mister X
+    * Schrei schicken an Mister X
+    * Foto Power-Up
+    * Fleck auf Karte erzeugen
+    * Zeige Zeit überspringen
+* Telefonieren
+* Pfad aufzeichnen
