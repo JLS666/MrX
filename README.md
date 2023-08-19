@@ -7,4 +7,4 @@ Ziel: Detektive müssen Mr. X fangen
 1. Die Detektive müssen ihn dann fangen. 
 1. Die Position von Mr. X wird nur alle x Minuten angezeigt.
 1. Mr. X sieht die Standorte von den Detektiven immer.  
-## 
+## Offene Fragen
