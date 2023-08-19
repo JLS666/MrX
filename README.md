@@ -8,7 +8,7 @@ Ziel: Detektive müssen Mr. X fangen
 1. Die Position von Mr. X wird nur alle x Minuten angezeigt.
 1. Mr. X sieht die Standorte von den Detektiven immer.  
 ## Offene Fragen
-1. Wann ist Mr. X gefangen?
+- Wann ist Mr. X gefangen?
     - berühren
     - sehen
     - x Meter Abstand haben (über GPS oder Bluetooth messen?)
