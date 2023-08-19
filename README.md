@@ -18,7 +18,7 @@ Ziel: Detektive müssen Mr. X fangen
 * Mister X Anzeige Frequenz
 * Spielgebiet eingrenzen können
 * Spielzeit eingeben
-* Startzeit eingeben, wie lange kann sich Mr. X davor loslaufen
+* Startzeit eingeben, wie lange kann Mr. X davor loslaufen
 
 ### Optional
 * Karte offline speichern
