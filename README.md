@@ -1,1 +1,3 @@
 # MrX
+
+## Spielprinzip
