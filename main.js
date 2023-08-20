@@ -31,6 +31,10 @@ function startUpLeaflet() {
   L.control.scale({imperial: false, metric: true}).addTo(map);
 }
 
+function randomPlacement() {
+  // Inspiration: https://www.daftlogic.com/sandbox-leaflet-maps-plot-random.htm
+}
+
 /******************* Hauptlogik ********************************/
 startUpLeaflet();
 
