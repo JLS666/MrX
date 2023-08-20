@@ -44,5 +44,7 @@ Was muss gespeichert werden?
 * Longitude
 
 ## Verwendete Bibliotheken
-* [Leaflet](https://github.com/Leaflet/Leaflet)
+* Kartenbilbiothek: [Leaflet](https://github.com/Leaflet/Leaflet)
+* Iconbibliothek: [Font Awesome](https://fontawesome.com)
+
 
