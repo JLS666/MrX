@@ -46,5 +46,6 @@ Was muss gespeichert werden?
 ## Verwendete Bibliotheken
 * Kartenbilbiothek: [Leaflet](https://github.com/Leaflet/Leaflet)
 * Iconbibliothek: [Font Awesome](https://fontawesome.com)
+* Marker für die Karte: [Awesome-Markers](https://github.com/lennardv2/Leaflet.awesome-markers/tree/2.0/develop)
 
 
