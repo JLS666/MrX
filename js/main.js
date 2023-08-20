@@ -8,7 +8,7 @@
  */
 
 // Für Intellisense in VS Code
-/// <reference path="typings/index.d.ts" />
+/// <reference path="../typings/index.d.ts" />
 
 
 /******************* Variablendeklarationen ********************/ 
@@ -35,8 +35,13 @@ function randomPlacement() {
   // Inspiration: https://www.daftlogic.com/sandbox-leaflet-maps-plot-random.htm
 }
 
+function playAudio() {
+  new Audio("https://samplelib.com/lib/preview/mp3/sample-15s.mp3").play()
+}
 /******************* Hauptlogik ********************************/
 startUpLeaflet();
+//new Audio("Ridin.mp3").play()
+playAudio();
 
 // Creates a red marker with the coffee icon
 var redMarker = L.AwesomeMarkers.icon({

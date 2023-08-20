@@ -15,6 +15,7 @@ Ziel: Detektive müssen Mr. X fangen
     * x Meter Abstand haben (über GPS oder Bluetooth messen?)
 * Sind die Power-Ups für alle an den gleichen Stellen?
 * Können die Power-Ups nur von einer Person eingesammelt werden oder von jedem?
+* Was passiert, wenn jemand den Spielbereich verlässt?
 
 
 ## Funktionen
@@ -45,7 +46,7 @@ Was muss gespeichert werden?
 
 ## Verwendete Bibliotheken
 * Kartenbilbiothek: [Leaflet](https://github.com/Leaflet/Leaflet)
-* Iconbibliothek: [Font Awesome](https://fontawesome.com)
+* Iconbibliothek: [Font Awesome](https://fontawesome.com/search?m=free&o=r)
 * Marker für die Karte: [Awesome-Markers](https://github.com/lennardv2/Leaflet.awesome-markers/tree/2.0/develop)
 
 
