@@ -242,7 +242,7 @@ options = {
 };
 
 */
-
+var nameOfMarker = L.marker({lon: 0, lat: 0}).bindPopup("Julian").addTo(map);
 function positionCallback(position) {
   //wann die Position ermittelt wurde
   /*
@@ -259,6 +259,7 @@ function positionCallback(position) {
     console.log("Geschw: " + position.coords.speed); //Meter pro Sek.
     console.log("Richtung: " + position.coords.heading); //Grad von wahrem Norden
     */
-    L.marker({lon: position.coords.longitude, lat: position.coords.latitude}).bindPopup("Julian").addTo(map);
+    //nameOfMarker = L.marker({lon: position.coords.longitude, lat: position.coords.latitude}).bindPopup("Julian").addTo(map);
+    nameOfMarker.setLatLng({lon: position.coords.longitude, lat: position.coords.latitude});
     ausgabe.innerHTML = "Zeitpunkt: " + position.timestamp + ", Latitude: " + position.coords.latitude + ", Longitude: " + position.coords.longitude + ", Genauigkeit in m: " + position.coords.accuracy + ", Höhe: " + position.coords.altitude + ", Genauigkeit in m: " + position.coords.altitudeAccuracy + ", Geschw: " + position.coords.speed + ", Richtung: " + position.coords.heading;
 }
