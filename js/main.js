@@ -7,6 +7,7 @@
  * Letzte Änderung: 20. August 2023
  */
 
+
 // Für Intellisense in VS Code
 /// <reference path="../typings/index.d.ts" />
 
@@ -242,7 +243,7 @@ options = {
 };
 
 */
-var nameOfMarker = L.marker({lon: 0, lat: 0}).bindPopup("Julian").addTo(map);
+var nameOfMarker = L.marker({lon: 0, lat: 0}, {icon: markerMrX}).bindPopup("Julian").addTo(map);
 function positionCallback(position) {
   //wann die Position ermittelt wurde
   /*
