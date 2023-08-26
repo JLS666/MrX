@@ -176,7 +176,7 @@ function positionError(error) {
 // Überprüfen, ob der Browser Geolocation unterstützt
 if ("geolocation" in navigator) {
   // Position überwachen
-  var watchId = navigator.geolocation.watchPosition(positionChanged, positionError);
+  var watchId = navigator.geolocation.watchPosition(positionChanged, positionError, {enableHighAccuracy: true});
 
   // Um die Überwachung zu beenden:
   // navigator.geolocation.clearWatch(watchId);
