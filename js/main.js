@@ -64,7 +64,7 @@ var markerClock = L.AwesomeMarkers.icon({   // Marker Zeit
 });
 
 const optionsLocation = {
-  enableHighAccuracy: true,
+  enableHighAccuracy: false,
   timeout: 5000,
   maximumAge: 0,
 };
