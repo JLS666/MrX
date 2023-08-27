@@ -127,6 +127,9 @@ farbenTest();
 function myEventFunc() {
   console.log("Test234");
   myMovingMarker.moveTo({lon: 9.52, lat: 49.2}, 500);
+  optionsLocation.enableHighAccuracy = !optionsLocation.enableHighAccuracy;
+  console.log(optionsLocation.enableHighAccuracy)
+  ausgabe.innerHTML += "  Aktueller Zustand: " + optionsLocation.enableHighAccuracy.toString();
 }
 
 ausgabe.addEventListener("click", myEventFunc);
