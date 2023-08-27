@@ -118,8 +118,12 @@ L.marker([49.28, 8.52], {icon: L.AwesomeMarkers.icon({icon: 'a', prefix: 'fa', m
 farbenTest();
 /******************* Ereignisbehandlung ************************/
 
+function myEventFunc() {
+  console.log("Test234");
+  myMovingMarker.moveTo({lon: 9.52, lat: 49.2}, 500);
+}
 
-
+ausgabe.addEventListener("click", myEventFunc);
 
 /******************* Spielwiese *******************************/
 
@@ -241,7 +245,7 @@ options = {
 
 */
 var nameOfMarker = L.marker({lon: 0, lat: 0}, {icon: markerMrX}).bindPopup("Julian").addTo(map);
-var myMovingMarker = L.Marker.movingMarker([[49.194, 9.512],[49.2, 9.52]], [8000], {icon: markerMrX});
+var myMovingMarker = L.Marker.movingMarker([[49.194, 9.512],[49.2, 9.52]], [100], {icon: markerMrX}).bindPopup("MrX");
 function positionCallback(position) {
   //wann die Position ermittelt wurde
   /*
@@ -261,7 +265,7 @@ function positionCallback(position) {
     //nameOfMarker = L.marker({lon: position.coords.longitude, lat: position.coords.latitude}).bindPopup("Julian").addTo(map);
     drawCircle(position.coords.latitude, position.coords.longitude, position.coords.accuracy/2);
     //nameOfMarker.setLatLng({lon: position.coords.longitude, lat: position.coords.latitude});
-    myMovingMarker.moveTo({lon: position.coords.longitude, lat: position.coords.latitude}, 4000);
+    myMovingMarker.moveTo({lon: position.coords.longitude, lat: position.coords.latitude}, 500);
     myMovingMarker.addTo(map);
 
     
