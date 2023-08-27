@@ -121,12 +121,9 @@ farbenTest();
 
 
 
-
-
-
-
-
 /******************* Spielwiese *******************************/
+
+
 
 
 function farbenTest()
@@ -244,6 +241,7 @@ options = {
 
 */
 var nameOfMarker = L.marker({lon: 0, lat: 0}, {icon: markerMrX}).bindPopup("Julian").addTo(map);
+var myMovingMarker = L.Marker.movingMarker([[49.194, 9.512],[49.2, 9.52]], [8000], {icon: markerMrX});
 function positionCallback(position) {
   //wann die Position ermittelt wurde
   /*
@@ -261,6 +259,13 @@ function positionCallback(position) {
     console.log("Richtung: " + position.coords.heading); //Grad von wahrem Norden
     */
     //nameOfMarker = L.marker({lon: position.coords.longitude, lat: position.coords.latitude}).bindPopup("Julian").addTo(map);
-    nameOfMarker.setLatLng({lon: position.coords.longitude, lat: position.coords.latitude});
+    drawCircle(position.coords.latitude, position.coords.longitude, position.coords.accuracy/2);
+    //nameOfMarker.setLatLng({lon: position.coords.longitude, lat: position.coords.latitude});
+    myMovingMarker.moveTo({lon: position.coords.longitude, lat: position.coords.latitude}, 4000);
+    myMovingMarker.addTo(map);
+
+    
+
+    //myMovingMarker.start();
     ausgabe.innerHTML = "Zeitpunkt: " + position.timestamp + ", Latitude: " + position.coords.latitude + ", Longitude: " + position.coords.longitude + ", Genauigkeit in m: " + position.coords.accuracy + ", Höhe: " + position.coords.altitude + ", Genauigkeit in m: " + position.coords.altitudeAccuracy + ", Geschw: " + position.coords.speed + ", Richtung: " + position.coords.heading;
 }
