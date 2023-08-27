@@ -181,16 +181,22 @@ function positionError(error) {
   console.error("Fehler bei der Positionsabfrage:", error.message);
 }
 
-// Überprüfen, ob der Browser Geolocation unterstützt
-if ("geolocation" in navigator) {
-  // Position überwachen
-  var watchId = navigator.geolocation.watchPosition(positionChanged, positionError, optionsLocation);
+function getMyPosition() {
 
-  // Um die Überwachung zu beenden:
-  // navigator.geolocation.clearWatch(watchId);
-} else {
-  console.log("Geolocation wird nicht unterstützt.");
+
+  // Überprüfen, ob der Browser Geolocation unterstützt
+  if ("geolocation" in navigator) {
+    // Position überwachen
+    var watchId = navigator.geolocation.getCurrentPosition(positionChanged, positionError, optionsLocation);
+
+    // Um die Überwachung zu beenden:
+    // navigator.geolocation.clearWatch(watchId);
+  } else {
+    console.log("Geolocation wird nicht unterstützt.");
+  }
 }
+const intervalID3 = setInterval(getMyPosition, 5000);
+//getMyPosition();
 
 
 
