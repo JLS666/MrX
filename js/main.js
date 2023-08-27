@@ -62,6 +62,12 @@ var markerClock = L.AwesomeMarkers.icon({   // Marker Zeit
   markerColor: 'orange',
   extraClasses: 'fa-flip'
 });
+
+const optionsLocation = {
+  enableHighAccuracy: true,
+  timeout: 5000,
+  maximumAge: 0,
+};
 /******************* Funktionen ********************************/
 function startUpLeaflet() {
   // add the OpenStreetMap tiles
@@ -178,7 +184,7 @@ function positionError(error) {
 // Überprüfen, ob der Browser Geolocation unterstützt
 if ("geolocation" in navigator) {
   // Position überwachen
-  var watchId = navigator.geolocation.watchPosition(positionChanged, positionError, {enableHighAccuracy: true});
+  var watchId = navigator.geolocation.watchPosition(positionChanged, positionError, optionsLocation);
 
   // Um die Überwachung zu beenden:
   // navigator.geolocation.clearWatch(watchId);
